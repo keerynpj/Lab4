@@ -2,8 +2,8 @@
 =========================================================
 Name        : index.html
 Assignment  : Lab 4 Exercise B
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Cody Casselman, Keeryn Johnson
+Submission  : February 7, 2023
 Description : Responsive Layouts.
 =========================================================
 -->
@@ -18,68 +18,101 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
+	<link rel="stylesheet" href="menu.css">
 
-	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
-		}		
-	</style>
 
     <style>
 		body { margin: 0; padding: 0;}
 		img { max-width: 100%; height: auto; }
-        .container { width: 100%;}
+        .container { width: 100%; box-sizing: border-box;}
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }        
         .main { padding: 15px; margin-left: 150px;}		
         .footer { position: fixed; bottom: 0; width: 100%;}
         .news-item { padding: 10px; }
 		
 		.row { 
-			/*I need some CSS codes.*/		
+			/*I need some CSS codes.*/
+			width:100%;
+			box-sizing: border-box;
+			
 		}
 
 		.large, .medium, .small {
 			/*I need some CSS codes.*/
+			margin: 0px; padding: 15px;
+			display: float;
+			float: left;
+			box-sizing: border-box;
 		}
 		
 		.gap {
 			/*I need some CSS codes.*/
+			margin-bottom: 75px;
+			display: inline-block;
+			clear: both;
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
 				/*I need some CSS codes.*/
+				width: 100%;
 			}
 			.medium { 
 				/*I need some CSS codes.*/
+				width: 70%
 			}
 			.small { 
 				/*I need some CSS codes.*/
+				width: 30%
 			 }
 		}
 
         @media screen and (max-width: 768px) {
             /*I need some CSS codes.*/
+			.large { 
+				/*I need some CSS codes.*/
+				width: 100%;
+			}
+			.medium { 
+				/*I need some CSS codes.*/
+				width: 60%
+			}
+			.small { 
+				/*I need some CSS codes.*/
+				width: 40%
+			 }
+			.menu {
+				width: 100%;
+			 }
+			 .main{
+				margin-left: 0px
+			 }
         }
 
         @media screen and (max-width: 480px) {
 			/*I need some CSS codes.*/
+			.large { 
+				/*I need some CSS codes.*/
+				width: 100%;
+			}
+			.medium { 
+				/*I need some CSS codes.*/
+				width: 100%
+			}
+			.small { 
+				/*I need some CSS codes.*/
+				width: 100%
+			 }
+			 .menu{
+				width:100%;
+			 }
+			 .main{
+				margin-left: 0px;
+			 }
+			 h1{
+				font-size: 18px
+			 }
         }
-
-        
     </style>
 </head>
 <body>
@@ -135,7 +168,7 @@ Description : Responsive Layouts.
 				<!-- Medium news item -->
 				<div class="medium news-item">
 					<header>
-						<h1>Mahdi Ansari Takes a Historic Spacewalk Near the ISS</h1>
+						<h1>Cody Casselman Takes a Historic Spacewalk Near the ISS</h1>
 					</header>
 					<img src="images/medium.jpg" alt="Medium Image">
 					<article>
