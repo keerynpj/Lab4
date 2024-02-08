@@ -1,0 +1,197 @@
+<!--
+=========================================================
+Name        : index.html
+Assignment  : Lab 4 Exercise C
+Author(s)   : Mahdi Ansari, William Arthur Philip Louis
+Submission  : May 21, 2030
+Description : Flex Layouts.
+=========================================================
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Webpage Layout</title>
+	<!--
+		Ensure that your HTML file includes the viewport meta tag in the <head> section. 
+		This tag is essential for responsive design as it tells the browser how to control the page's dimensions and scaling.
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>	
+		/* Remove borders at the end, they have been add just for detecting positions of items*/	
+		div {
+			border: 1px dashed gray;	
+		}
+		.row{ 
+			border: 1px solid red;			
+		}
+		.large {
+			border: 1px solid blue;	
+		}
+		.medium {
+			border: 1px solid green;	
+		}
+		.small {
+			border: 1px solid yellow;	
+		}		
+	</style>
+
+	<style>
+		/* CSS for menu. You don't need to touch this part */
+		.menu { background-color: #e6e6e6; }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+		.menu ul li {
+			padding: 5px 0;
+		}
+        .menu ul li a {
+            padding: 10px;
+            text-decoration: none;
+            color: #315eff;
+        }
+	</style>
+
+	<style>
+		* {
+			/*
+			To have the borders included in the total width calculation of your elements,
+			so that a 70% width and a 30% width element truly add up to 100% including their borders,
+			Apply border-box to all elements
+			*/
+			box-sizing: border-box;
+		}
+        body { margin: 0; padding: 0; }
+        img { max-width: 100%; height: auto; }
+        .container { 
+			/*I need some CSS codes.*/
+		 }
+        .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
+		.body { 
+			/*I need some CSS codes.*/
+		}
+        .main { 
+			padding: 15px; 
+			/*I need some CSS codes.*/
+		}
+        
+        .news-item { padding: 10px; }
+        .row { 
+			/*I need some CSS codes.*/
+		}
+        
+
+        @media screen and (min-width: 769px) {
+            .menu { width: 150px; }     
+			.large { 
+				/*I need some CSS codes.*/
+			}
+			.medium { 
+				/*I need some CSS codes.*/
+			}
+			.small { 
+				/*I need some CSS codes.*/
+			 }       
+        }
+
+        @media screen and (max-width: 768px) {
+			.body { 
+				/*I need some CSS codes.*/
+			}
+            .menu ul { 
+				/*I need some CSS codes.*/
+			 }            
+            /*I need some CSS codes.*/
+        }
+
+        @media screen and (max-width: 480px) {
+            .news-item header h1 { font-size: 18px; }
+            .medium, .small { 
+				/*I need some CSS codes.*/
+			 }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+		<div class="body">
+			<div class="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="row">
+					<!-- Large news item -->
+					<div class="large news-item">
+						<header>
+							<h1>Revolutionary New Computer Changes the Tech World</h1>
+						</header>
+						<img src="images/large.jpg" alt="Large Image">
+						<article>
+							<h2>The Dawn of a New Era</h2>
+							<p>In a groundbreaking development, TechCorp has unveiled a computer with the ability to learn and adapt. This new technology, which the company has been developing in secret for years, promises to revolutionize the way we interact with machines.</p>
+
+							<h3>Unprecedented Capabilities</h3>
+							<p>Experts are astounded by the computer's capabilities, which include advanced artificial intelligence, unparalleled processing speed, and an intuitive user interface. "It's unlike anything we've ever seen," said a leading tech analyst.</p>
+
+							<h3>The Future is Here</h3>
+							<p>With this release, TechCorp not only sets a new standard in computing but also opens up a world of possibilities for future technology. The company plans to make this technology available to the public by the end of the year.</p>
+						</article>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Small news item -->
+					<div class="small news-item">
+						<header>
+							<h1>Calgary's Natural Beauty Captivates Tourists</h1>
+						</header>
+						<img src="images/small.jpg" alt="Small Image">
+						<article>
+							<h2>Emerald Oasis in the Heart of the City</h2>
+							<p>Calgary, known for its vibrant city life, is now gaining fame for its lush green spaces and rich biodiversity. The city's parks and riversides have become a haven for nature lovers.</p>
+					
+							<h3>Urban Wildlife Flourishes</h3>
+							<p>Recent reports indicate a rise in urban wildlife sightings, adding to the city's allure. Deer, coyotes, and various bird species are now common sights in Calgary's green spaces.</p>
+					
+							<h3>A Green Transformation</h3>
+							<p>The transformation of the city into a green paradise has been praised by environmentalists, calling it a perfect blend of urban development and nature conservation.</p>
+						</article>
+					</div>
+
+					<!-- Medium news item -->
+					<div class="medium news-item">
+						<header>
+							<h1>Your Name Takes a Historic Spacewalk Near the ISS</h1>
+						</header>
+						<img src="images/medium.jpg" alt="Medium Image">
+						<article>
+							<h2>A Historic Moment in Space Exploration</h2>
+							<p>In an unprecedented feat of human courage and technological prowess, astronaut Mahdi Ansari completed a spacewalk near the International Space Station (ISS), marking a new milestone in space exploration.</p>
+
+							<h3>A Breathtaking Journey</h3>
+							<p>Ansari, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
+
+							<h3>Pushing the Boundaries of Science</h3>
+							<p>The successful spacewalk not only demonstrates human resilience but also advances our understanding of space and our capabilities to explore further into the unknown.</p>
+						</article>
+					</div>
+				</div>
+			</div>	
+		</div>	
+        <div class="footer">
+            <footer>
+                <p>Fictional News Article for Educational Use at UofC</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

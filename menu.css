@@ -1,0 +1,30 @@
+.menu { 
+    width: 150px; 
+    background-color: #e6e6e6; 
+    float: left; 
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    float: left; /* This makes each list item float to the left */
+    margin-right: 20px; /* Adds some space between the menu items */
+}
+
+.menu ul li a {
+    display: block; /* Makes the entire area of the list item clickable */
+    padding: 10px; /* Adds some padding for better appearance */
+    text-decoration: none; /* Removes the underline from the links */
+    color: #315eff; /* Set link color */
+}
+
+/* Clearfix to contain the floated elements */
+.menu ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
